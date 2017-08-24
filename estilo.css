@@ -979,13 +979,22 @@ CONTACTO
 }
 
 /*Calendario de Investing.com*/
-.investing-calendar, .investing-calendar + div{
+.investing-calendar, 
+.investing-calendar + div{
   width: 100%;
-  min-height: 95vh;
+  min-height: 90vh;
   max-width: 900px;
   margin: auto;
   display: block;
   text-align: center;
+}
+
+.animar.anima_entrada.seccion.calendario-inversion{
+  animation: aparece_desdeabajo .5s both;
+}
+
+.seccion.calendario-inversion {
+  max-width: 900px;
 }
 
 .pregunta.parrafo {
@@ -1664,6 +1673,11 @@ PIE DE PAGINA
   .politicas .animar.anima_entrada li li li{
     animation: aparece_desdeabajo ease 1s 2.5s both;
   }
+
+  .investing-calendar.animar iframe{
+    animation: aparece_desdeder ease 1s 1s both;
+  }
+
 }
 
 @media (min-width: 1200px){
@@ -1724,6 +1738,37 @@ PIE DE PAGINA
   .quienes-somos .imagen .fundadores{
     padding: 3vmin 0 0 10%;
   }
+
+  /*Calendario de Investing.com*/
+  .investing-calendar, 
+  .investing-calendar + div{
+    width: 100%;
+    max-width: 900px;
+  }
+
+  .investing-calendar{
+    min-height: 90vh;
+  }
+
+  .doble-columna .seccion{
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+
+  .doble-columna .indicador .titulo{
+    font-size: 1.4em;
+  }
+
+  .seccion.calendario-inversion {
+    max-width: 900px;
+  }
+
+  .doble-columna .animar.anima_entrada.seccion.calendario-inversion{
+    animation: aparece_desdeder 1s 2s both;
+  }
 }
 
 @media (min-width: 1600px){
@@ -1736,9 +1781,38 @@ PIE DE PAGINA
     width: calc(100% / 4);
   }
 
+  .doble-columna .indicador{
+    width: 32%;
+    width: calc(100% / 3);
+  }
+
   .animar.anima_entrada .indicador:nth-child(4n+2){  animation-delay: 1s; }
   .animar.anima_entrada .indicador:nth-child(4n+3){  animation-delay: 1.5s; }
   .animar.anima_entrada .indicador:nth-child(4n+4){  animation-delay: 2s; }
+
+  .doble-columna .animar.anima_entrada .indicador:nth-child(3n+1){  animation-delay: 1s; }
+  .doble-columna .animar.anima_entrada .indicador:nth-child(3n+2){  animation-delay: 1.5s; }
+  .doble-columna .animar.anima_entrada .indicador:nth-child(3n+3){  animation-delay: 2s; }
+
+  .doble-columna .seccion.enlaces {
+    max-width: calc(100% - 920px);
+  }
+}
+
+@media (min-width: 1820px){  
+  .investing-calendar{
+    min-height: 70vh;
+  }
+
+  .doble-columna .indicador {
+    width: 24%;
+    width: calc(100% / 4);
+  }
+
+  .doble-columna .animar.anima_entrada .indicador:nth-child(4n+1){  animation-delay: .5s; }
+  .doble-columna .animar.anima_entrada .indicador:nth-child(4n+2){  animation-delay: 1s; }
+  .doble-columna .animar.anima_entrada .indicador:nth-child(4n+3){  animation-delay: 1.5s; }
+  .doble-columna .animar.anima_entrada .indicador:nth-child(4n+4){  animation-delay: 2s; }
 }
 
 @media (min-width: 761px){
